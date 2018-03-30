@@ -1,12 +1,12 @@
-#permission checker.py (rollback: permission_checker_rollback.py)
+# permission checker.py (rollback: permission_checker_rollback.py)
 -ready for AWS lambda, can be set with Cloud Watch and crone job
 -checks if all users or roles in account have all needed permissions based on prepared policy json file
 -can check on more accounts
 -list of exceptions can be used for not attaching policies to specific users/roles
 
-#Configuration needs:
+# Configuration needs:
 
-##AWS Lambda function:
+## AWS Lambda function:
 -in AWS Lambda create new Lambda function
 -trigger can be set during creating new function or later
 -IAM role have to be set to Lambda function with policy to have permission for SQS, STS (Security Token Services) and IAM
@@ -16,7 +16,7 @@
 
 For rollback of whole work Lambda with `permission_checker_rollback.py` can be set
 
-##AWS SQS service:
+## AWS SQS service:
 in AWS SQS service on the same account where Lambda runs, create new Queue
 IAM role has to be set for Lambda function with sqs:SendMessage, sqs:GetQueueUrl
 
